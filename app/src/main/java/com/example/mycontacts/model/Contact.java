@@ -1,12 +1,14 @@
 package com.example.mycontacts.model;
 
-
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.Observable;
+
 @Entity(tableName = "contacts")
-public class Contact {
+public class Contact{
+
     @PrimaryKey(autoGenerate = true)
     private int id;
 

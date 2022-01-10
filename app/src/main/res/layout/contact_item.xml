@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="contact"
+            type="com.example.mycontacts.model.Contact" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginBottom="4dp"
     android:layout_width="match_parent"
@@ -11,6 +17,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="4dp"
+        android:text="@{contact.lastName}"
         app:layout_constraintEnd_toStartOf="@+id/editTextEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,6 +27,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="4dp"
+        android:text="@{contact.firstName}"
         app:layout_constraintEnd_toStartOf="@+id/editTextPhone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
@@ -29,6 +37,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="4dp"
+        android:text="@{contact.email}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextLastName"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +47,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="4dp"
+        android:text="@{contact.phone}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextFirstName"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
